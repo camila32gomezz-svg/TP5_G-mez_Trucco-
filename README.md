@@ -1,8 +1,8 @@
-INTEGRANTES
+INTEGRANTES:
 Gómez, Camila y Tucco, Juan 
-CURSO Y DIVISIÓN
+CURSO Y DIVISIÓN:
 4to 2da
-TEMA DEL TRABAJO
+TEMA DEL TRABAJO:
 Matrices
-DESCRIPCIÓN 
+DESCRIPCIÓN:
 Trabajo Práctico N5 realizado por la materia
