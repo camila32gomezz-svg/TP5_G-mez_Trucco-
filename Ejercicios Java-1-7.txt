@@ -1,0 +1,244 @@
+Ejercicio_1:
+import java.util.Scanner;
+public class Ejercicios {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int [][] matriz = new int[2][2];
+        matriz[0][0] = 4;
+        matriz[0][1] = 5;
+
+        matriz[1][0] = 3;
+        matriz[1][1] = 2;
+
+        for(int i = 0; i<2;i++){
+            for(int j= 0 ; j<2;j++){
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println("");
+        }
+        }
+    }
+
+Ejercicio_2:
+import java.util.Scanner;
+public class Ejercicios {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int [][] matriz = new int[3][3];
+        int i = 0;
+        matriz[0][0] = 1;
+        matriz[0][1] = 5;
+        matriz[0][2] = 4;
+
+        matriz[1][0] = 2;
+        matriz[1][1] = 4;
+        matriz[1][2] = 5;
+
+        matriz[2][0] = 1;
+        matriz[2][1] = 2;
+        matriz[2][2] = 3;
+
+        while(i<3){
+            int j = 0;
+            while(j<3){
+            System.out.print(matriz[i][j]);
+            j++;
+            }
+            System.out.println("");
+            i++;
+        }
+        }
+    }
+
+Ejercicio_3:
+import java.util.Scanner;
+public class Ejercicios {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int filas;
+        int col;
+        do{
+            System.out.println("Ingrese el N! de filas: ");
+            filas = teclado.nextInt();
+
+            System.out.println("Ingresew el N! de columnas: ");
+            col = teclado.nextInt();
+
+            if(filas == col){
+            System.out.println("La matriz no puede ser cuadrada");
+            }
+        } while (filas == col);
+
+        int [][] matriz = new int [filas][col];
+
+        for(int i = 0; i<filas;i++){
+            for(int j= 0 ; j<col;j++){
+                System.out.print("Ingresa la matriz: ["+i+"]["+j+"]");
+                matriz [i][j] = teclado.nextInt();
+            }
+        }
+
+        for(int x = 0;x<filas;x++){
+            for(int z = 0;z<col;z++){
+                System.out.print(matriz[x][z]);
+            }
+            System.out.println(" ");
+        }
+        }
+    }
+
+Ejercicio_4:
+import java.util.Scanner;
+
+public class Ejercicios {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int fila;
+        int col;
+            System.out.println("ingresa el N° de filas: ");
+            fila = teclado.nextInt();
+
+            System.out.println("ingresa el N° de Columnas: ");
+            col = teclado.nextInt();
+
+            teclado.nextLine();
+            String [][] matriz = new String[fila][col];
+
+            for(int i = 0; i<fila; i++){
+                System.out.println("Ingrese el nombre de la fila N°: ["+i+"]");
+                matriz[i][0] = teclado.nextLine();
+
+                for(int j= 1; j<col; j++){
+                    System.out.println("Ingrese el numero para N°: ["+i+"]"+"["+j+"]");
+                    matriz[i][j] = teclado.nextLine();
+                }
+            }
+
+            for(int x= 0;x<fila;x++){
+                for(int z=0;z<col;z++){
+                    System.out.print(" | ");
+                    System.out.print(matriz[x][z]);
+                }
+                System.out.println(" | ");
+            }
+    }
+}
+    
+Ejercicio_5:
+import java.util.Scanner;
+
+public class Ejercicios {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+            String [][] matriz = new String[3][3];
+
+            for(int i = 0; i<3;i++){
+                for(int j = 0; j<3;j++){
+                    if((i+j) % 2 == 0){
+                    System.out.println("Ingrese un nombre en la matriz: ["+i+"]"+"["+j+"]");
+                    matriz[i][j]=teclado.nextLine();
+                    }
+                    else{
+                    System.out.println("Ingrese un numero en la matriz: ["+i+"]"+"["+j+"]");
+                    matriz[i][j]=teclado.nextLine();
+                    }
+                }
+            }
+
+            System.out.println("Matriz Datos: ");
+
+            for(int x = 0; x<3;x++){
+                for(int z = 0; z<3;z++){
+                    if((x+z) % 2 == 0){
+                    System.out.print("["+matriz[x][z]+"]");
+                    }else{
+                    System.out.println("["+matriz[x][z]+"]");
+                    }
+                }
+            }
+    }
+}
+    
+Ejercicio_6:
+import java.util.Scanner;
+
+public class Ejercicios {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int p ;
+        System.out.println("Ingrese la cantidad de empleados");
+        p = teclado.nextInt();
+        String [][] matriz = new String[p][3];
+
+        teclado.nextLine();
+
+        for(int i = 0; i<p;i++){
+            System.out.println("Ingrese el Nombre del empleado N°: "+i);
+            matriz[i][0] = teclado.nextLine();
+            for(int j = 1; j<3;j++){
+                if(j%2 != 0){
+                    System.out.println("Ingrese la edad del empleado");
+                    matriz[i][j] = teclado.nextLine();
+                }
+                if (j%2 == 0){
+                    System.out.println("Ingrese el sueldo del empleado");
+                    matriz[i][j] = teclado.nextLine();
+                }
+            }
+        }  
+        System.out.println("[Nombre][Edad][Sueldo]");
+        
+        for(int g=0; g<p;g++){
+            System.out.print("["+matriz[g][0]+"]");
+            for(int d=1;d<3;d++){
+                if(g%2 != 0){
+                System.out.print("["+matriz[g][d]+"]");
+                }
+                if (g%2 == 0){
+                System.out.print("["+matriz[g][d]+"]");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
+Ejercicio_7:
+
+import java.util.Scanner;
+public class Ejercicios {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int fila;
+        int col;
+        double suma_real = 0.0;
+        int c = 0;
+        double promedio = 0.0;
+        System.out.println("Ingresa el N° de filas");
+        fila = teclado.nextInt();
+        System.out.println("Ingresa el N° de col");
+        col = teclado.nextInt();
+        int [][] matriz = new int[fila][col];
+        for(int i = 0; i<fila;i++){
+            for(int j=0;j<col;j++){
+                System.out.println("Ingresa la matriz:["+i+"]"+"["+j+"]");
+                matriz[i][j] = teclado.nextInt();
+            }
+        }
+        for(int x=0;x<fila;x++){
+            for(int z=0;z<col;z++){
+                if((x+z)%2==0){
+                    continue;
+                }
+                if((x+z)%2!=0){
+                    suma_real=suma_real + matriz[x][z];
+                    c++;
+                }
+            }
+        }
+        promedio=suma_real/c;
+        System.out.println("El promedio de la posiciones Impares es de: "+promedio);
+    }
+}
